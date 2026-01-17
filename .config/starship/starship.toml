@@ -1,10 +1,10 @@
 format = """$all"""
 
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[](bold red) "
+success_symbol = "[➜](bold #98971a) "
+error_symbol = "[](bold #cc241d) "
 format = "$symbol"
-vimcmd_symbol = "[](bold blue) "
+vimcmd_symbol = "[](bold #458588) "
 
 
 [aws]
@@ -29,6 +29,7 @@ symbol = " "
 symbol = " "
 
 [directory]
+style = "bold #fe8019"
 read_only = " 󰌾"
 
 [docker_context]
