@@ -14,3 +14,11 @@ bind({ "n", "v", "o" }, "<leader>p", '"+p', { desc = "Paste after from clipboard
 
 -- Format file
 bind("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format file" })
+
+-- Keep cursor centered
+bind("n", "<C-d>", "<C-d>zz")
+bind("n", "<C-u>", "<C-u>zz")
+
+-- Keep search centered
+bind("n", "n", "nzzzv")
+bind("n", "N", "Nzzzv")

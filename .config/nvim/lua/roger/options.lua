@@ -1,6 +1,12 @@
 -- alias
 local opt = vim.opt
 
+-- Disable mouse
+vim.cmd([[set mouse=]])
+
+-- Disable swap file
+vim.cmd( [[set noswapfile]])
+
 -- Numbers
 opt.number = true
 opt.relativenumber = true
@@ -10,6 +16,7 @@ opt.expandtab = true -- Use spaces instead of tabs
 opt.tabstop = 2      -- A tab is 2 spaces
 opt.shiftwidth = 2   -- Indentation amount when auto-indenting
 opt.softtabstop = 2  -- Number of spaces tab uses while editing
+opt.smartindent = true
 
 -- Line wrap
 opt.wrap = false
