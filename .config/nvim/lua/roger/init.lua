@@ -3,3 +3,4 @@
 require("roger.options")
 require("roger.binds")
 require("roger.lazy")
+require("roger.lsp")

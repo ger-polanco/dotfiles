@@ -1,41 +1,46 @@
 return {
-  -- Move
-  {
-    'echasnovski/mini.move',
-    version = '*',
-    config = function()
-      local configs = require("mini.move")
-      configs.setup({
-        mappings = {
-          -- NOTE: Visual mode
-          left = '<S-h>',
-          down = '<S-j>',
-          up = '<S-k>',
-          right = '<S-l>',
+    -- Mini Move: Move lines
+    {
+        'echasnovski/mini.move',
+        version = '*',
+        config = function()
+            local configs = require("mini.move").setup({
+                mappings = {
+                    left = '<S-h>',
+                    down = '<S-j>',
+                    up = '<S-k>',
+                    right = '<S-l>',
+                },
+            })
+        end
+    },
 
-          -- NOTE: Normal mode (one line)
-          line_left = '',
-          line_down = '',
-          line_up = '',
-          line_right = '',
-        },
-      })
-    end
-  },
-  -- Surround
-  {
-    'echasnovski/mini.surround',
-    version = '*',
-    config = function()
-      require("mini.surround").setup({})
-    end
-  },
-  -- ai (Better va* and vi*)
-  {
-    "echasnovski/mini.ai",
-    event = "VeryLazy",
-    config = function()
-      require("mini.ai").setup()
-    end,
-  }
+    -- Mini Surround: select surrounded 
+    {
+        'echasnovski/mini.surround',
+        version = '*',
+        config = function()
+            require("mini.surround").setup({})
+        end
+    },
+
+    -- Mini ai: better va* and vi*
+    {
+        "echasnovski/mini.ai",
+        event = "VeryLazy",
+        config = function()
+            require("mini.ai").setup({})
+        end
+    },
+
+    -- Mini jump: supercharged f/t motions
+    {
+        "nvim-mini/mini.jump",
+        version = "*", -- stable 
+
+        config = function()
+            local jump = require("mini.jump")
+            jump.setup({})
+        end
+    },
 }

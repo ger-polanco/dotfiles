@@ -7,9 +7,10 @@ vim.g.mapleader = " "
 local bind = vim.keymap.set
 
 -- System copy
-bind("n", "<leader>y", '"+y', { noremap = true, desc = "Yank motion to clipboard" })
-bind("v", "<leader>y", '"+y', { noremap = true, desc = "Yank visual to clipboard" })
+bind({ "n", "v", "o" }, "<leader>y", '"+y', { noremap = true, desc = "Yank motion to clipboard" })
 
 -- System paste
-bind("n", "<leader>p", '"+p', { desc = "Paste after from clipboard" }) -- Normal mode: Paste after cursor from system clipboard
-bind("v", "<leader>p", '"+p', { desc = "Paste over selection from clipboard" }) -- Visual mode: Replace selection with clipboard content (after yank is preserved)
+bind({ "n", "v", "o" }, "<leader>p", '"+p', { desc = "Paste after from clipboard" }) -- Normal mode: Paste after cursor from system clipboard
+
+-- Format file
+bind("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format file" })

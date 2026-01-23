@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/roger/options.lua
-
 -- alias
 local opt = vim.opt
 
@@ -9,9 +7,9 @@ opt.relativenumber = true
 
 -- Tabs
 opt.expandtab = true -- Use spaces instead of tabs
-opt.tabstop = 4      -- A tab is 2 spaces
-opt.shiftwidth = 4   -- Indentation amount when auto-indenting
-opt.softtabstop = 4  -- Number of spaces tab uses while editing
+opt.tabstop = 2      -- A tab is 2 spaces
+opt.shiftwidth = 2   -- Indentation amount when auto-indenting
+opt.softtabstop = 2  -- Number of spaces tab uses while editing
 
 -- Line wrap
 opt.wrap = false
@@ -33,5 +31,12 @@ vim.g.netrw_altv = 1
 vim.g.netrw_alto = 0
 
 -- Other
-opt.signcolumn = yes
+opt.signcolumn = "yes"
 opt.updatetime = 250
+
+-- Floating windows
+opt.winborder = "rounded"
+vim.cmd [[
+  highlight NormalFloat guibg=#1e1e2e
+  highlight FloatBorder guifg=#a0a0a0 guibg=#1e1e2e
+]]
