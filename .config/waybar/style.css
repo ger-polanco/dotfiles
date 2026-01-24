@@ -71,7 +71,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #161320;
-  background: #fae3b0;
+  background: #ebdbb2;
 }
 
 /* Right Modules */
@@ -84,7 +84,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #1a1826;
-  background: #fae3b0;
+  background: #ebdbb2;
 }
 
 #cpu {
@@ -96,7 +96,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #161320;
-  background: #fae3b0;
+  background: #ebdbb2;
 }
 
 #memory {
@@ -108,5 +108,5 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #161320;
-  background: #fae3b0;
+  background: #ebdbb2;
 }
