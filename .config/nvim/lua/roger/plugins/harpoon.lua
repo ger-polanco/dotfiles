@@ -29,9 +29,5 @@ return {
         bind("n", "<leader>3", function() harpoon:list():select(3) end, { desc = "Harpoon: Switch to buffer 3" })
         bind("n", "<leader>4", function() harpoon:list():select(4) end, { desc = "Harpoon: Switch to buffer 4" })
         bind("n", "<leader>5", function() harpoon:list():select(5) end, { desc = "Harpoon: Switch to buffer 5" })
-
     end
 }
-
-            
-

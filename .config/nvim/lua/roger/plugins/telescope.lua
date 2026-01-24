@@ -3,11 +3,15 @@ return {
     tag = "v0.2.1",
     dependencies = {
         "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-ui-select.nvim",
     },
     config = function()
-        require("telescope").setup({
+        local telescope = require("telescope")
+        local builtin = require("telescope.builtin")
+
+        telescope.setup({
             defaults = {
-                vimrep_arguments = {
+                vimgrep_arguments = {
                     "rg",
                     "--color=never",
                     "--no-heading",
@@ -17,17 +21,23 @@ return {
                     "--smart-case",
                 },
             },
+            extensions = {
+                ["ui-select"] = {
+                    require("telescope.themes").get_dropdown(),
+                },
+            },
         })
 
-        local bind = vim.keymap.set
+        telescope.load_extension("ui-select")
 
-        bind("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope: Find files" })
-        bind("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Telescope: Live grep" })
+        local bind = vim.keymap.set
+        bind("n", "<leader>ff", builtin.find_files, { desc = "Telescope: Find files" })
+        bind("n", "<leader>fs", builtin.live_grep, { desc = "Telescope: Live grep" })
         bind("n", "<leader>fg", function()
-            local ok = pcall(require("telescope.builtin").git_files)
+            local ok = pcall(builtin.git_files)
             if not ok then
                 vim.notify("Not a git repository", vim.log.levels.WARN, { title = "Telescope" })
             end
-        end, { desc = "Telescope: Find Git files (warn if not a git repo)" })
+        end, { desc = "Telescope: Find Git files" })
     end,
 }

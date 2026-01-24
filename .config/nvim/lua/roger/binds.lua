@@ -15,6 +15,12 @@ bind({ "n", "v", "o" }, "<leader>p", '"+p', { desc = "Paste after from clipboard
 -- Format file
 bind("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format file" })
 
+-- Completions
+vim.keymap.set('i', '<C-o>', function()
+    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-x><C-o>', true, false, true), 'n')
+end, { desc = "Omni Completion" })
+
+
 -- Keep cursor centered
 bind("n", "<C-d>", "<C-d>zz")
 bind("n", "<C-u>", "<C-u>zz")
@@ -22,3 +28,8 @@ bind("n", "<C-u>", "<C-u>zz")
 -- Keep search centered
 bind("n", "n", "nzzzv")
 bind("n", "N", "Nzzzv")
+
+-- Diagnostics
+vim.keymap.set("n", "<leader>d", function()
+    vim.diagnostic.open_float(nil, { focusable = false })
+end, { desc = "Show LSP diagnostic" })

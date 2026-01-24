@@ -5,9 +5,9 @@ return {
 
         keys = {
             { "<leader>gs", "<cmd>G status<CR>", { desc = "Git status" } },
-            { "<leader>ga", "<cmd>Gwrite<CR>", { desc = "Git add current file" } },
-            { "<leader>gc", "<cmd>Gcommit<CR>", { desc = "Git commit" } },
-            { "<leader>gb", "<cmd>G blame<CR>", { desc = "Git blame" } },
+            { "<leader>ga", "<cmd>Gwrite<CR>",   { desc = "Git add current file" } },
+            { "<leader>gc", "<cmd>Gcommit<CR>",  { desc = "Git commit" } },
+            { "<leader>gb", "<cmd>G blame<CR>",  { desc = "Git blame" } },
         },
     },
 
@@ -25,7 +25,7 @@ return {
                     changedelete = { text = '~' },
                     untracked    = { text = '┆' },
                 },
-                signcolumn = true,  
+                signcolumn = true,
                 attach_to_untracked = false,
                 watch_gitdir = { follow_files = true },
                 auto_attach = true,
@@ -33,4 +33,3 @@ return {
         end
     },
 }
-

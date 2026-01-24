@@ -15,7 +15,7 @@ return {
         end
     },
 
-    -- Mini Surround: select surrounded 
+    -- Mini Surround: select surrounded
     {
         'echasnovski/mini.surround',
         version = '*',
@@ -36,7 +36,7 @@ return {
     -- Mini jump: supercharged f/t motions
     {
         "nvim-mini/mini.jump",
-        version = "*", -- stable 
+        version = "*", -- stable
 
         config = function()
             local jump = require("mini.jump")

@@ -5,7 +5,7 @@ local opt = vim.opt
 vim.cmd([[set mouse=]])
 
 -- Disable swap file
-vim.cmd( [[set noswapfile]])
+vim.cmd([[set noswapfile]])
 
 -- Numbers
 opt.number = true
@@ -13,9 +13,9 @@ opt.relativenumber = true
 
 -- Tabs
 opt.expandtab = true -- Use spaces instead of tabs
-opt.tabstop = 2      -- A tab is 2 spaces
-opt.shiftwidth = 2   -- Indentation amount when auto-indenting
-opt.softtabstop = 2  -- Number of spaces tab uses while editing
+opt.tabstop = 4      -- A tab is 4 spaces
+opt.shiftwidth = 4   -- Indentation amount when auto-indenting
+opt.softtabstop = 4  -- Number of spaces tab uses while editing
 opt.smartindent = true
 
 -- Line wrap
@@ -43,7 +43,6 @@ opt.updatetime = 250
 
 -- Floating windows
 opt.winborder = "rounded"
-vim.cmd [[
-  highlight NormalFloat guibg=#1e1e2e
-  highlight FloatBorder guifg=#a0a0a0 guibg=#1e1e2e
-]]
+
+-- Completion - disable initial selection of first cmp
+vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
