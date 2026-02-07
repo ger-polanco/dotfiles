@@ -12,6 +12,6 @@ eval "$(starship init zsh)"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Use exa instead of ls
-alias ls='exa --color=auto --icons'
-alias ll='exa -lh --color=auto --icons'
-alias la='exa -a --color=auto --icons'
+alias ls='eza --color=auto --icons'
+alias ll='eza -lh --color=auto --icons'
+alias la='eza -a --color=auto --icons'
