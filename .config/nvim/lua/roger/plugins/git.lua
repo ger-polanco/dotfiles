@@ -6,7 +6,9 @@ return {
         keys = {
             { "<leader>gs", "<cmd>G status<CR>", { desc = "Git status" } },
             { "<leader>ga", "<cmd>Gwrite<CR>",   { desc = "Git add current file" } },
-            { "<leader>gc", "<cmd>Gcommit<CR>",  { desc = "Git commit" } },
+            { "<leader>gc", "<cmd>Git commit<CR>",  { desc = "Git commit" } },
+            { "<leader>gp", "<cmd>Git push<CR>", { desc = "Git push" } },
+            { "<leader>gd", "<cmd>Git diff<CR>", { desc = "Git diff" } },
             { "<leader>gb", "<cmd>G blame<CR>",  { desc = "Git blame" } },
         },
     },
