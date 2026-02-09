@@ -8,9 +8,16 @@ return {
         local null_ls = require("null-ls")
 
         null_ls.setup({
-            sources = null_ls.builtins.formatting.black.with({
-                filetypes = { "python" },
-            }),
+            sources = {
+                null_ls.builtins.formatting.black.with({
+                    filetypes = { "python" },
+                }),
+
+                null_ls.builtins.formatting.shfmt.with({
+                    filetypes = { "sh", "bash" },
+                    extra_args = { "-i", "4", "-ci" },
+                }),
+            },
         })
     end
 }
